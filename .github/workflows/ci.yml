@@ -45,7 +45,7 @@ jobs:
           body: |
             [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-048754?logo=buymeacoffee)](https://jaywcjlove.github.io/#/sponsor)
             
-            Documentation ${{ steps.changelog.outputs.tag }}: https://raw.githack.com/uiwjs/react-login-page/${{ steps.changelog.outputs.gh-pages-short-hash }}/fonts/index.html  
+            Documentation ${{ steps.changelog.outputs.tag }}: https://raw.githack.com/jaywcjlove/pinyin-font/${{ steps.changelog.outputs.gh-pages-short-hash }}/fonts/index.html  
             Comparing Changes: ${{ steps.changelog.outputs.compareurl }} 
 
             ${{ steps.changelog.outputs.changelog }}
