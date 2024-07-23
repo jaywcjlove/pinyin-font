@@ -9,11 +9,8 @@
       font-family: 'pinyinstep';
       src: url('./pinyin-step.ttf') format('truetype');
     }
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-    }
+    body { background-color: #000; color: #fff; }
+    body, header p { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
     a { color: #62bce5; text-decoration: none; }
     a:hover { color: #388db4; }
     a.github-corner:hover .octo-arm { animation: octocat-wave 560ms infinite linear; }
@@ -24,19 +21,16 @@
       20%,60%{-webkit-transform:rotate(-25deg); transform:rotate(-25deg);}
       40%,80%{-webkit-transform:rotate(10deg); transform:rotate(10deg);}
     }
-    ruby > rt {
-      color: #656565;
-    }
+    ruby > rt { color: #656565; font-weight: 300; }
     header sup {
       position: absolute;
       color: #656565;
       font-size: 16px;
       font-weight: 200;
     }
-    header {
-      font-size: 24px;
-      padding: 20px;
-    }
+    header h1 { margin-bottom: 0; }
+    header p { font-size: 1em; font-weight: 100; padding-bottom: 2em; }
+    header { font-size: 24px; text-align: center; padding: 20px; }
     footer {
       font-weight: 100;
       text-align: center;
@@ -69,8 +63,12 @@
   </a>
   <main>
     <header>
-      <h1>宝宝字帖<ruby>拼音字体<rt>Pinyin Font</rt></ruby><sup>v1.0.0</sup></h1>
+      <h1>宝宝字帖<ruby>拼音字体<rt>Pinyin Font</rt></ruby><sup>v1.1.0</sup></h1>
+      <p>专门为应用《<a href="https://github.com/jaywcjlove/copybook-generator" target="_blank" title="宝宝字帖 for macOS">宝宝字帖</a>》制作的拼音字体</p>
     </header>
+    <p contenteditable="true">
+      Hello World
+    </p>
     <p>
       A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
     </p>
@@ -81,7 +79,7 @@
       ā á ǎ à ō ó ǒ ò ē é ě è ī í ǐ ì ū ú ǔ ù ǖ ǘ ǚ ǜ ü
     </p>
     <p>
-      0 1 2 3 4 5 6 7 8 9
+      0123456789
     </p>
   </main>
   <footer class="footer">
