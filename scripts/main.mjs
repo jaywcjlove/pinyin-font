@@ -45,7 +45,7 @@ function writeFontStream(svgPath, fontStream) {
   fontStream.write(glyph);
 }
 
-function svgToSVGFont(src = "svg", dist = "./fonts/pinyin.svg") {
+function svgToSVGFont(src = "svg", dist = "./docs/pinyin.svg") {
   return new Promise((resolve, reject) => {
     const fontStream = new SVGIcons2SVGFont({
       log: (message) => console.log(message),
@@ -74,7 +74,7 @@ function svgToSVGFont(src = "svg", dist = "./fonts/pinyin.svg") {
   });
 }
 
-function svgFontToTTF(src = "./fonts/pinyin.svg", dist = "./fonts/pinyin.ttf") {
+function svgFontToTTF(src = "./docs/pinyin.svg", dist = "./docs/pinyin.ttf") {
   const svgFont = fs.readFileSync(src, "utf8");
   const ttf = svg2ttf(svgFont, {});
   const ttfBuf = Buffer.from(ttf.buffer);
@@ -83,6 +83,11 @@ function svgFontToTTF(src = "./fonts/pinyin.svg", dist = "./fonts/pinyin.ttf") {
 }
 
 ;(async () => {
-  await svgToSVGFont("./svg", "./fonts/pinyin.svg");
-  svgFontToTTF("./fonts/pinyin.svg", "./fonts/pinyin.ttf");
+  await svgToSVGFont("./svg", "./docs/pinyin.svg");
+  svgFontToTTF("./docs/pinyin.svg", "./docs/pinyin.ttf");
+  // Update version in docs/index.html
+  const pkg = fs.readJsonSync('./package.json');
+  const fileContent = fs.readFileSync('./docs/index.html', 'utf-8');
+  const updatedContent = fileContent.replace(/<sup>.*<\/sup>/g, `<sup>v${pkg.version}</sup>`);
+  fs.writeFileSync('./docs/index.html', updatedContent);
 })()
