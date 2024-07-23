@@ -34,22 +34,22 @@ function charToSvgFontUnicode(char) {
 }
 
 function writeFontStream(svgPath, fontStream) {
-  // file name
-  let fileNmae = path.basename(svgPath, ".svg");
+  const fileNmae = path.basename(svgPath, ".svg");
+  let unicodeName = fileNmae;
+  if (unicodeName.endsWith('_')) {
+    unicodeName = unicodeName.replace(/_$/g, '');
+  }
   const glyph = fs.createReadStream(svgPath)
-  //const curUnicode = String.fromCharCode(fileNmae);
-  const curUnicode = charToSvgFontUnicode(fileNmae);
-  const unicode = [curUnicode];
-  console.log(`\n  ┌┈▶ ${fileNmae} ${unicode}`);
-  glyph.metadata = { unicode: [fileNmae] , name: fileNmae };
+  console.log(`\n  ┌┈▶ ${fileNmae} ${charToSvgFontUnicode(unicodeName)}`);
+  glyph.metadata = { unicode: [unicodeName] , name: fileNmae };
   fontStream.write(glyph);
 }
 
-function svgToSVGFont(src = "svg", dist = "./docs/pinyin.svg") {
+function svgToSVGFont(fontName = "pinyin",src = "svg", dist = "./docs/pinyin.svg") {
   return new Promise((resolve, reject) => {
     const fontStream = new SVGIcons2SVGFont({
       log: (message) => console.log(message),
-      fontName: "pinyin",
+      fontName: fontName,
       fontHeight: 1000,
       normalize: true,
     });
@@ -83,8 +83,9 @@ function svgFontToTTF(src = "./docs/pinyin.svg", dist = "./docs/pinyin.ttf") {
 }
 
 ;(async () => {
-  await svgToSVGFont("./svg", "./docs/pinyin.svg");
-  svgFontToTTF("./docs/pinyin.svg", "./docs/pinyin.ttf");
+  await svgToSVGFont("pinyinstep","./svg/step", "./docs/pinyin-step.svg");
+  svgFontToTTF("./docs/pinyin-step.svg", "./docs/pinyin-step.ttf");
+
   // Update version in docs/index.html
   const pkg = fs.readJsonSync('./package.json');
   const fileContent = fs.readFileSync('./docs/index.html', 'utf-8');
