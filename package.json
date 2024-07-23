@@ -1,18 +1,17 @@
 {
   "name": "pinyin-font",
   "version": "1.0.0",
-  
-  "description": "拼音字母字体 ===",
+  "private": true,
+  "description": "拼音字母字体",
   "scripts": {
-    "start": "scripts/main.mjs"
+    "start": "node scripts/main.mjs"
   },
   "keywords": [],
   "author": "jaywcjlove",
   "license": "ISC",
   "devDependencies": {
+    "fs-extra": "^11.2.0",
+    "svg2ttf": "^6.0.3",
     "svgicons2svgfont": "^12.0.0"
-  },
-  "dependencies": {
-    "fs-extra": "^11.2.0"
   }
 }
