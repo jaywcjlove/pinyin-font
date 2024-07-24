@@ -9,6 +9,10 @@
       font-family: 'pinyinstep';
       src: url('./pinyin-step.ttf?v=1.3.0') format('truetype');
     }
+    @font-face {
+      font-family: 'pinyin';
+      src: url('./pinyin-regular.ttf?v=1.3.0') format('truetype');
+    }
     body { background-color: #000; color: #fff; }
     body, header p { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; }
     a { color: #62bce5; text-decoration: none; }
@@ -36,6 +40,7 @@
       text-align: center;
       padding-bottom: 6em;
     }
+    main h2 { color: #2196F3; }
     main {
       display: flex;
       flex-direction: column;
@@ -46,6 +51,9 @@
     }
     p + p {
       margin-top: 1em;
+    }
+    p.regular {
+      font-family: 'pinyin';
     }
     p {
       font-family: 'pinyinstep';
@@ -70,6 +78,7 @@
       <h1>宝宝字帖<ruby>拼音字体<rt>Pinyin Font</rt></ruby><sup>v1.2.0</sup></h1>
       <p>专门为应用《<a href="https://github.com/jaywcjlove/copybook-generator" target="_blank" title="宝宝字帖 for macOS">宝宝字帖</a>》制作的拼音字体</p>
     </header>
+    <h2><ruby>拼音笔顺体<rt>Pinyin Step Font</rt></ruby></h2>
     <p spellcheck="false" contenteditable="true">
       Hello World 1987
     </p>
@@ -83,6 +92,22 @@
       ā á ǎ à ō ó ǒ ò ē é ě è ī í ǐ ì ū ú ǔ ù ǖ ǘ ǚ ǜ ü
     </p>
     <p>
+      01234 56789
+    </p>
+    <h2><ruby>拼音常规体<rt>Pinyin Regular Font</rt></ruby></h2>
+    <p class="regular" spellcheck="false" contenteditable="true">
+      Hello World 1987
+    </p>
+    <p class="regular">
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 
+    </p>
+    <p class="regular">
+      a b c d e f g h i j k l m n o p q r s t u v w x y z
+    </p>
+    <p class="regular">
+      ā á ǎ à ō ó ǒ ò ē é ě è ī í ǐ ì ū ú ǔ ù ǖ ǘ ǚ ǜ ü
+    </p>
+    <p class="regular">
       01234 56789
     </p>
   </main>

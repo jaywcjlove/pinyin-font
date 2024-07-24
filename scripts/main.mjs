@@ -83,8 +83,13 @@ function svgFontToTTF(src = "./docs/pinyin.svg", dist = "./docs/pinyin.ttf") {
 }
 
 ;(async () => {
+  // pinyinstep(拼音笔顺体)
   await svgToSVGFont("pinyinstep","./svg/step", "./docs/pinyin-step.svg");
   svgFontToTTF("./docs/pinyin-step.svg", "./docs/pinyin-step.ttf");
+
+  // pingyin-regular(拼音常规体)
+  await svgToSVGFont("pinyin","./svg/regular", "./docs/pinyin-regular.svg");
+  svgFontToTTF("./docs/pinyin-regular.svg", "./docs/pinyin-regular.ttf");
 
   // Update version in docs/index.html
   const pkg = fs.readJsonSync('./package.json');
