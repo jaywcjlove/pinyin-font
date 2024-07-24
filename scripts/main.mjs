@@ -95,6 +95,7 @@ function svgFontToTTF(src = "./docs/pinyin.svg", dist = "./docs/pinyin.ttf") {
   const pkg = fs.readJsonSync('./package.json');
   const fileContent = fs.readFileSync('./docs/index.html', 'utf-8');
   let updatedContent = fileContent.replace(/<sup>.*<\/sup>/g, `<sup>v${pkg.version}</sup>`);
-  updatedContent = fileContent.replace(/url\('.\/pinyin-step.*\.ttf'\)/g, `url('./pinyin-step.ttf?v=${pkg.version}')`);
+  updatedContent = fileContent.replace(/url\('.\/pinyin-step\.ttf.*'\)\s/g, `url('./pinyin-step.ttf?v=${pkg.version}') `);
+  updatedContent = fileContent.replace(/url\('.\/pinyin-regular\.ttf.*'\)\s/g, `url('./pinyin-regular.ttf?v=${pkg.version}') `);
   fs.writeFileSync('./docs/index.html', updatedContent);
 })()
