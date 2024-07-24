@@ -32,14 +32,10 @@
       font-size: 16px;
       font-weight: 200;
     }
-    header h1 { margin-bottom: 0; padding-top: 3em; }
+    header h1 { margin-bottom: 0.25em; padding-top: 3em; }
     header p { font-size: 1em; font-weight: 100; padding-bottom: 2em; }
     header { font-size: 24px; text-align: center; padding: 20px; }
-    footer {
-      font-weight: 100;
-      text-align: center;
-      padding-bottom: 6em;
-    }
+    footer { font-weight: 100; text-align: center; padding-bottom: 6em; }
     main h2 { color: #2196F3; padding-bottom: 2em; padding-top: 2em; }
     main {
       display: flex;
@@ -49,12 +45,8 @@
       min-height: 100vh;
       padding-bottom: 6em;
     }
-    p + p {
-      margin-top: 1em;
-    }
-    p.regular {
-      font-family: 'pinyin';
-    }
+    p + p { margin-top: 1em; }
+    p.regular { font-family: 'pinyin'; }
     p {
       font-family: 'pinyinstep';
       font-size: 120px;
@@ -63,6 +55,21 @@
       text-align: center;
       line-height: 0.85;
     }
+    .download {
+      text-align: center;
+      background: #ffffff45;
+      padding: 0.65em 1em;
+      border-radius: 2em;
+      box-shadow: 0px 0px 0px 3px #ffffff24;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.23em;
+      min-width: 180px;
+      font-size: 0.65em;
+      transition: all 0.3s;
+    }
+    .download:hover { background: #2279a0; color: white; }
     </style>
 </head>
 <body>
@@ -77,6 +84,10 @@
     <header>
       <h1>宝宝字帖<ruby>拼音字体<rt>Pinyin Font</rt></ruby><sup>v1.2.0</sup></h1>
       <p>专门为应用《<a href="https://github.com/jaywcjlove/copybook-generator" target="_blank" title="宝宝字帖 for macOS">宝宝字帖</a>》制作的拼音字体</p>
+      <a class="download" href="https://github.com/jaywcjlove/pinyin-font/releases" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-file-earmark-font-fill" viewBox="0 0 16 16" height="1em" width="1em"><path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM5.057 6h5.886L11 8h-.5c-.18-1.096-.356-1.192-1.694-1.235l-.298-.01v5.09c0 .47.1.582.903.655v.5H6.59v-.5c.799-.073.898-.184.898-.654V6.755l-.293.01C5.856 6.808 5.68 6.905 5.5 8H5l.057-2z"></path> </svg>
+        下载字体
+      </a>
     </header>
     <h2><ruby>拼音笔顺体<rt>Pinyin Step Font</rt></ruby></h2>
     <p spellcheck="false" contenteditable="true">
