@@ -1,7 +1,5 @@
 # Created by https://www.gitignore.io/api/node
 # Edit at https://www.gitignore.io/?templates=node
-docs/pinyin.ttf
-docs/pinyin-step.ttf
 node_modules
 
 npm-debug.log*
