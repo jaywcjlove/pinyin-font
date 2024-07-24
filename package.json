@@ -1,9 +1,9 @@
 {
   "name": "pinyin-font",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "private": true,
-  "description": "拼音字母字体",
-  "homepage": "",
+  "description": "宝宝字帖拼音字体",
+  "homepage": "https://jaywcjlove.github.io/pinyin-font/",
   "repository": {
     "type": "git",
     "url": "https://github.com/jaywcjlove/pinyin-font"

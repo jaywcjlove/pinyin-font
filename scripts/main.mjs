@@ -41,7 +41,7 @@ function writeFontStream(svgPath, fontStream) {
     unicodeName = unicodeName.replace(/_$/g, '');
   }
   const glyph = fs.createReadStream(svgPath)
-  console.log(`\n  ┌┈▶ ${fileNmae} ${charToSvgFontUnicode(unicodeName)}`);
+  //console.log(`\n  ┌┈▶ ${fileNmae} ${charToSvgFontUnicode(unicodeName)}`);
   glyph.metadata = { unicode: [unicodeName] , name: fileNmae };
   fontStream.write(glyph);
 }
@@ -104,8 +104,8 @@ function ttfTowoff2(src = "./docs/pinyin.ttf", dist = "./docs/pinyin.woff2") {
   // Update version in docs/index.html
   const pkg = fs.readJsonSync('./package.json');
   const fileContent = fs.readFileSync('./docs/index.html', 'utf-8');
-  let updatedContent = fileContent.replace(/<sup>.*<\/sup>/g, `<sup>v${pkg.version}</sup>`);
-  updatedContent = fileContent.replace(/url\('.\/pinyin-step\.ttf.*'\)\s/g, `url('./pinyin-step.ttf?v=${pkg.version}') `);
-  updatedContent = fileContent.replace(/url\('.\/pinyin-regular\.ttf.*'\)\s/g, `url('./pinyin-regular.ttf?v=${pkg.version}') `);
+  const updatedContent = fileContent.replace(/<sup>.*<\/sup>/g, `<sup>v${pkg.version}</sup>`)
+          .replace(/url\('.\/pinyin-step\.ttf.*'\)\s/g, `url('./pinyin-step.ttf?v=${pkg.version}') `)
+          .replace(/url\('.\/pinyin-regular\.ttf.*'\)\s/g, `url('./pinyin-regular.ttf?v=${pkg.version}') `);
   fs.writeFileSync('./docs/index.html', updatedContent);
 })()
