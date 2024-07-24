@@ -2,6 +2,7 @@ import fs from 'fs-extra';
 import path from 'path';
 import SVGIcons2SVGFont from 'svgicons2svgfont';
 import svg2ttf from 'svg2ttf';
+import ttf2woff2 from 'ttf2woff2';
 
 /*
  * Filter svg files
@@ -82,14 +83,23 @@ function svgFontToTTF(src = "./docs/pinyin.svg", dist = "./docs/pinyin.ttf") {
   console.log(`SUCCESS TTF font successfully created!\n  ╰┈▶ ${dist}`);
 }
 
+function ttfTowoff2(src = "./docs/pinyin.ttf", dist = "./docs/pinyin.woff2") {
+  const ttf = fs.readFileSync(src);
+  const woff2 = Buffer.from(ttf2woff2(ttf).buffer);
+  fs.writeFileSync(dist, woff2);
+  console.log(`SUCCESS WOFF2 font successfully created!\n  ╰┈▶ ${dist}`);
+}
+
 ;(async () => {
   // pinyinstep(拼音笔顺体)
   await svgToSVGFont("pinyinstep","./svg/step", "./docs/pinyin-step.svg");
   svgFontToTTF("./docs/pinyin-step.svg", "./docs/pinyin-step.ttf");
-
+  ttfTowoff2("./docs/pinyin-step.ttf", "./docs/pinyin-step.woff2");
+  
   // pingyin-regular(拼音常规体)
   await svgToSVGFont("pinyin","./svg/regular", "./docs/pinyin-regular.svg");
   svgFontToTTF("./docs/pinyin-regular.svg", "./docs/pinyin-regular.ttf");
+  ttfTowoff2("./docs/pinyin-regular.ttf", "./docs/pinyin-regular.woff2");
 
   // Update version in docs/index.html
   const pkg = fs.readJsonSync('./package.json');

@@ -39,7 +39,7 @@ jobs:
         if: steps.create_tag.outputs.successful == 'true'
         with:
           allowUpdates: true
-          artifacts: 'docs/*.ttf'
+          artifacts: 'docs/*.ttf,docs/*.woff2'
           token: ${{ secrets.GITHUB_TOKEN }}
           name: ${{ steps.create_tag.outputs.version }}
           tag: ${{ steps.create_tag.outputs.version }}
