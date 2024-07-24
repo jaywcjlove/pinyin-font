@@ -1,5 +1,6 @@
 import fs from 'fs-extra';
 import path from 'path';
+import semver from 'semver';
 import SVGIcons2SVGFont from 'svgicons2svgfont';
 import svg2ttf from 'svg2ttf';
 import ttf2woff2 from 'ttf2woff2';
@@ -74,10 +75,18 @@ function svgToSVGFont(fontName = "pinyin",src = "svg", dist = "./docs/pinyin.svg
     fontStream.end();
   });
 }
+// Update version in docs/index.html
+const pkg = fs.readJsonSync('./package.json');
 
 function svgFontToTTF(src = "./docs/pinyin.svg", dist = "./docs/pinyin.ttf") {
   const svgFont = fs.readFileSync(src, "utf8");
-  const ttf = svg2ttf(svgFont, {});
+  const version = semver.parse(pkg.version);
+  const ttf = svg2ttf(svgFont, {
+    description: "Pinyin font specifically designed for the app 'Baby Copybook'.",
+    copyright: "Copyright (c) 2024, Wang Chujiang <https://wangchujiang.com>",
+    url: "https://github.com/jaywcjlove/pinyin-font",
+    version: `Version ${version.major}.${version.minor}`,
+  });
   const ttfBuf = Buffer.from(ttf.buffer);
   fs.writeFileSync(dist, ttfBuf);
   console.log(`SUCCESS TTF font successfully created!\n  ╰┈▶ ${dist}`);
@@ -101,8 +110,6 @@ function ttfTowoff2(src = "./docs/pinyin.ttf", dist = "./docs/pinyin.woff2") {
   svgFontToTTF("./docs/pinyin-regular.svg", "./docs/pinyin-regular.ttf");
   ttfTowoff2("./docs/pinyin-regular.ttf", "./docs/pinyin-regular.woff2");
 
-  // Update version in docs/index.html
-  const pkg = fs.readJsonSync('./package.json');
   const fileContent = fs.readFileSync('./docs/index.html', 'utf-8');
   const updatedContent = fileContent.replace(/<sup>.*<\/sup>/g, `<sup>v${pkg.version}</sup>`)
           .replace(/url\('.\/pinyin-step\.ttf.*'\)\s/g, `url('./pinyin-step.ttf?v=${pkg.version}') `)
