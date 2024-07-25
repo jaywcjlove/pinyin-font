@@ -7,11 +7,11 @@
 
 ![宝宝字帖拼音笔顺体](https://github.com/user-attachments/assets/71842a73-64a1-4b32-ba2f-466ddc06e699)
 
-## <ruby>音标拼音<rt>Phonetic Pīnyīn</rt></ruby>
+## <ruby>音标<rt>Phonetic</rt>拼音<rt>Pīnyīn</rt></ruby>
 
 ![音标拼音](https://github.com/user-attachments/assets/7432e4d6-0a4c-4230-b065-9d2d3c88d65b)
 
-## <ruby>拼音常规体<rt>Pīnyīn Regular Font</rt></ruby>
+## <ruby>拼<rt>Pīn</rt>音<rt>yīn</rt>常规体<rt> Regular Font</rt></ruby>
 
 ![宝宝字帖拼音常规体](https://github.com/user-attachments/assets/276fd6d6-44fd-4ca6-a3ae-e5fdda048bee)
 
@@ -82,7 +82,7 @@
 <ruby>`ing`<rt>鹦</rt></ruby>
 <ruby>`ong`<rt>虫</rt></ruby>
 
-### <ruby>声调<rt>shēng diào</rt></ruby>
+### <ruby>声<rt>shēng</rt>调<rt>diào</rt></ruby>
 
 `ā` `á` `ǎ` `à`  
 `ō` `ó` `ǒ` `ò`  
