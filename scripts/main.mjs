@@ -25,15 +25,40 @@ export function filterSvgFiles(svgFolderPath) {
   return svgArr;
 }
 
-function charToSvgFontUnicode(char) {
-  // 获取字符的 Unicode 码点
-  let unicode = char.codePointAt(0);
-  // 转换为十六进制格式，并大写表示
-  let unicodeHex = unicode.toString(16).toUpperCase();
-  // 格式化为 SVG 字体使用的 Unicode 表示
-  let svgFontUnicode = `&#x${unicodeHex};`;
-  return svgFontUnicode;
-}
+/// 符号
+const symbol = {
+  space: ' ',                        // 普通空格
+  nonBreakingSpace: '\u00A0',        // 不间断空格
+  enSpace: '\u2002',                 // 半个空格
+  emSpace: '\u2003',                 // 全个空格
+  quarterEmSpace: '\u2005',          // 四分之一空格
+  thinSpace: '\u2009',               // 细空格
+  zeroWidthSpace: '\u200B',          // 零宽度空格
+  ideographicSpace: '\u3000',        // 全角空格
+  narrowNoBreakSpace: '\u202F',      // 窄不间断空格（可选）
+  mediumMathematicalSpace: '\u205F', // 中等数学空格（可选）
+  zeroWidthNonJoiner: '\u200C',      // 零宽度非连接符（可选）
+  zeroWidthJoiner: '\u200D',         // 零宽度连接符（可选）
+
+  period: ".",                       // 句号
+  comma: ",",                        // 逗号
+  question: "?",                     // 问号
+  exclamation: "!",                  // 感叹号
+  colon: ":",                        // 冒号
+  semicolon: ";",                    // 分号
+  apostrophe: "'",                   // 单引号
+  quotation: '"',                    // 双引号
+  leftBrace: "{",                    // 左大括号
+  rightBrace: "}",                   // 右大括号
+  leftParenthesis: "(",              // 左小括号
+  rightParenthesis: ")",             // 右小括号
+  leftBracket: "[",                  // 左中括号
+  rightBracket: "]",                 // 右中括号
+  hyphen: "-",                       // 连字符
+  underscore: "_",                   // 下划线
+  ampersand: "&",                    // 与
+  atSign: "@",                       // @
+};
 
 function writeFontStream(svgPath, fontStream) {
   const fileNmae = path.basename(svgPath, ".svg");
@@ -41,9 +66,12 @@ function writeFontStream(svgPath, fontStream) {
   if (unicodeName.endsWith('_')) {
     unicodeName = unicodeName.replace(/_$/g, '');
   }
-  const glyph = fs.createReadStream(svgPath)
-  //console.log(`\n  ┌┈▶ ${fileNmae} ${charToSvgFontUnicode(unicodeName)}`);
-  glyph.metadata = { unicode: [unicodeName] , name: fileNmae };
+  if (symbol[unicodeName]) {
+    unicodeName = symbol[unicodeName];
+  }
+  const glyph = fs.createReadStream(svgPath);
+  //console.log(`\n  ┌┈▶ ${fileNmae} ${unicode}`);
+  glyph.metadata = { unicode: [unicodeName.normalize('NFC')] , name: fileNmae.replace(/_$/g, '') };
   fontStream.write(glyph);
 }
 
@@ -77,7 +105,6 @@ function svgToSVGFont(fontName = "pinyin",src = "svg", dist = "./docs/pinyin.svg
 }
 // Update version in docs/index.html
 const pkg = fs.readJsonSync('./package.json');
-
 function svgFontToTTF(src = "./docs/pinyin.svg", dist = "./docs/pinyin.ttf") {
   const svgFont = fs.readFileSync(src, "utf8");
   const version = semver.parse(pkg.version);

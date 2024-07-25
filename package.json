@@ -15,6 +15,7 @@
   "author": "jaywcjlove",
   "license": "MIT",
   "devDependencies": {
+    "@types/svg2ttf": "^5.0.3",
     "fs-extra": "^11.2.0",
     "semver": "^7.6.3",
     "svg2ttf": "^6.0.3",
