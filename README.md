@@ -59,7 +59,7 @@
 <ruby>`ui`<rt>水</rt></ruby>
 <ruby>`ao`<rt>袄</rt></ruby>
 <ruby>`ou`<rt>鸥</rt></ruby>
-<ruby>`iu`<rt>救</rt></ruby>
+<ruby>`iu`<rt>优</rt></ruby>
 <ruby>`ie`<rt>姐</rt></ruby>
 <ruby>`üe`<rt>月</rt></ruby>
 
