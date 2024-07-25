@@ -17,7 +17,7 @@
 
 ## <ruby>拼音<rt>Pīnyīn</rt></ruby>
 
-### 23 个声母
+### 23 个<ruby>声母<rt>shēng mǔ</rt></ruby>
 
 <ruby>`b`<rt>菠</rt></ruby>
 <ruby>`p`<rt>泼</rt></ruby>
@@ -43,7 +43,7 @@
 <ruby>`y`<rt>医</rt></ruby>
 <ruby>`w`<rt>舞</rt></ruby>
 
-### 6 个单韵母
+### 6 个<ruby>单韵母<rt>dān yùn mǔ</rt></ruby>
 
 <ruby>`a`<rt>阿</rt></ruby>
 <ruby>`o`<rt>哦</rt></ruby>
@@ -52,7 +52,7 @@
 <ruby>`u`<rt>乌</rt></ruby>
 <ruby>`ü`<rt>鱼</rt></ruby>
 
-### 8 个复韵母
+### 8 个<ruby>复韵母<rt>fù yùn mǔ</rt></ruby>
 
 <ruby>`ai`<rt>艾</rt></ruby>
 <ruby>`ei`<rt>诶</rt></ruby>
@@ -63,11 +63,11 @@
 <ruby>`ie`<rt>姐</rt></ruby>
 <ruby>`üe`<rt>月</rt></ruby>
 
-### 1 个特殊韵母
+### 1 个<ruby>特殊韵母<rt>tè shū yùn mǔ</rt></ruby>
 
 <ruby>`er`<rt>耳</rt></ruby>
 
-### 5 个前鼻音韵母
+### 5 个<ruby>前鼻音韵母<rt>qián bí yīn yùn mǔ</rt></ruby>
 
 <ruby>`an`<rt>安</rt></ruby>
 <ruby>`en`<rt>恩</rt></ruby>
@@ -75,14 +75,14 @@
 <ruby>`un`<rt>春</rt></ruby>
 <ruby>`ün`<rt>晕</rt></ruby>
 
-### 4 个后鼻音韵母
+### 4 个<ruby>后鼻音韵母<rt>hòu bí yīn yùn mǔ</rt></ruby>
 
 <ruby>`ang`<rt>昂</rt></ruby>
 <ruby>`eng`<rt>风</rt></ruby>
 <ruby>`ing`<rt>鹦</rt></ruby>
 <ruby>`ong`<rt>虫</rt></ruby>
 
-### 声调
+### <ruby>声调<rt>shēng diào</rt></ruby>
 
 `ā` `á` `ǎ` `à`  
 `ō` `ó` `ǒ` `ò`  
