@@ -7,6 +7,10 @@
 
 ![宝宝字帖拼音笔顺体](https://github.com/user-attachments/assets/71842a73-64a1-4b32-ba2f-466ddc06e699)
 
+## <ruby>音标拼音<rt>Phonetic Pīnyīn</rt></ruby>
+
+![音标拼音](https://github.com/user-attachments/assets/7432e4d6-0a4c-4230-b065-9d2d3c88d65b)
+
 ## <ruby>拼音常规体<rt>Pīnyīn Regular Font</rt></ruby>
 
 ![宝宝字帖拼音常规体](https://github.com/user-attachments/assets/276fd6d6-44fd-4ca6-a3ae-e5fdda048bee)
