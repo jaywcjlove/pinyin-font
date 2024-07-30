@@ -19,7 +19,7 @@
     "fs-extra": "^11.2.0",
     "semver": "^7.6.3",
     "svg2ttf": "^6.0.3",
-    "svgicons2svgfont": "^13.0.0",
+    "svgicons2svgfont": "^14.0.0",
     "ttf2woff": "^3.0.0",
     "ttf2woff2": "^6.0.1"
   }
