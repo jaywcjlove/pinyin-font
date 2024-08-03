@@ -21,7 +21,7 @@
 
 ## <ruby>拼<rt>Pīn</rt>音<rt>yīn</rt>文<rt>wén</rt>楷<rt>kǎi</rt>细<rt>Light</rt>常规<rt>Regular</rt>体<rt>Font</rt></ruby>
 
-当前拼音字母字体来自于[澳声通拼音文楷](https://github.com/jeffreyxuan/toneoz-font-pinyin-wenkai)提取拼音字母
+拼音文楷细常规体，拼音字母字体来自于[澳声通拼音文楷](https://github.com/jeffreyxuan/toneoz-font-pinyin-wenkai)提取拼音字母
 
 ![拼音文楷细常规体](https://github.com/user-attachments/assets/eb172e55-9a33-4091-8421-baa953d2fe4f)
 
