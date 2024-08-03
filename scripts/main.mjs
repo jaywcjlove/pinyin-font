@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import path from 'path';
 import semver from 'semver';
-import SVGIcons2SVGFont from 'svgicons2svgfont';
+import { SVGIcons2SVGFontStream } from 'svgicons2svgfont';
 import svg2ttf from 'svg2ttf';
 import ttf2woff2 from 'ttf2woff2';
 
@@ -77,7 +77,7 @@ function writeFontStream(svgPath, fontStream) {
 
 function svgToSVGFont(fontName = "pinyin",src = "svg", dist = "./docs/pinyin.svg") {
   return new Promise((resolve, reject) => {
-    const fontStream = new SVGIcons2SVGFont({
+    const fontStream = new SVGIcons2SVGFontStream({
       log: (message) => console.log(message),
       fontName: fontName,
       fontHeight: 1000,
