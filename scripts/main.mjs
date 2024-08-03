@@ -56,8 +56,20 @@ const symbol = {
   rightBracket: "]",                 // 右中括号
   hyphen: "-",                       // 连字符
   underscore: "_",                   // 下划线
+  plus: "+",                         // 加号
   ampersand: "&",                    // 与
   atSign: "@",                       // @
+
+  numberSign: "#",                   // 井号
+  percentSign: "%",
+  caretOrCircumflex: "^",
+  asterisk: "*",
+  equalsSign: "=",
+  tilde: "~",
+  lessThanSign: "<",
+  greaterThanSign: ">",
+  verticalBarOrPipe: "|",
+  backslash: "\\",
 };
 
 function writeFontStream(svgPath, fontStream) {
@@ -132,14 +144,20 @@ function ttfTowoff2(src = "./docs/pinyin.ttf", dist = "./docs/pinyin.woff2") {
   svgFontToTTF("./docs/pinyin-step.svg", "./docs/pinyin-step.ttf");
   ttfTowoff2("./docs/pinyin-step.ttf", "./docs/pinyin-step.woff2");
   
-  // pingyin-regular(拼音常规体)
-  await svgToSVGFont("pinyin","./svg/regular", "./docs/pinyin-regular.svg");
+  // pinyin-regular(拼音常规体)
+  await svgToSVGFont("pinyin", "./svg/regular", "./docs/pinyin-regular.svg");
   svgFontToTTF("./docs/pinyin-regular.svg", "./docs/pinyin-regular.ttf");
   ttfTowoff2("./docs/pinyin-regular.ttf", "./docs/pinyin-regular.woff2");
+
+  // pinyin-wenkai-light(拼音文楷常规体)
+  await svgToSVGFont("pinyin-wenkai-light","./svg/wenkai-light", "./docs/pinyin-wenkai-light.svg");
+  svgFontToTTF("./docs/pinyin-wenkai-light.svg", "./docs/pinyin-wenkai-light.ttf");
+  ttfTowoff2("./docs/pinyin-wenkai-light.ttf", "./docs/pinyin-wenkai-light.woff2");
 
   const fileContent = fs.readFileSync('./docs/index.html', 'utf-8');
   const updatedContent = fileContent.replace(/<sup>.*<\/sup>/g, `<sup>v${pkg.version}</sup>`)
           .replace(/url\('.\/pinyin-step\.ttf.*'\)\s/g, `url('./pinyin-step.ttf?v=${pkg.version}') `)
-          .replace(/url\('.\/pinyin-regular\.ttf.*'\)\s/g, `url('./pinyin-regular.ttf?v=${pkg.version}') `);
+          .replace(/url\('.\/pinyin-regular\.ttf.*'\)\s/g, `url('./pinyin-regular.ttf?v=${pkg.version}') `)
+          .replace(/url\('.\/pinyin-wenkai-light\.ttf.*'\)\s/g, `url('./pinyin-wenkai-light.ttf?v=${pkg.version}') `);
   fs.writeFileSync('./docs/index.html', updatedContent);
 })()
