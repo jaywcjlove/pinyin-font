@@ -54,11 +54,14 @@ const symbol = {
   rightParenthesis: ")",             // 右小括号
   leftBracket: "[",                  // 左中括号
   rightBracket: "]",                 // 右中括号
-  hyphen: "-",                       // 连字符
+  hyphen: "-",                       // 连字符 - 减号
   underscore: "_",                   // 下划线
   plus: "+",                         // 加号
+  multiply: "\u00D7",                // 乘号 ×
+  divide: "\u00F7",                  // 除号 ÷
   ampersand: "&",                    // 与
   atSign: "@",                       // @
+  dollarSign: "$",                   // 美元符号 
 
   numberSign: "#",                   // 井号
   percentSign: "%",
@@ -68,22 +71,23 @@ const symbol = {
   tilde: "~",
   lessThanSign: "<",
   greaterThanSign: ">",
-  verticalBarOrPipe: "|",
-  backslash: "\\",
+  verticalBarOrPipe: "|",             // 竖线
+  backslash: "\\",                    // 反斜杠
+  slash: "/",                         // 斜杠
 };
 
 function writeFontStream(svgPath, fontStream) {
   const fileNmae = path.basename(svgPath, ".svg");
   let unicodeName = fileNmae;
   if (unicodeName.endsWith('_')) {
-    unicodeName = unicodeName.replace(/_$/g, '');
+    unicodeName = unicodeName.replace(/_$/g, '').normalize('NFC');
   }
   if (symbol[unicodeName]) {
     unicodeName = symbol[unicodeName];
   }
   const glyph = fs.createReadStream(svgPath);
   //console.log(`\n  ┌┈▶ ${fileNmae} ${unicode}`);
-  glyph.metadata = { unicode: [unicodeName.normalize('NFC')] , name: fileNmae.replace(/_$/g, '') };
+  glyph.metadata = { unicode: [unicodeName] , name: fileNmae.replace(/_$/g, '') };
   fontStream.write(glyph);
 }
 
