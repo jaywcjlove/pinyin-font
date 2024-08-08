@@ -81,9 +81,10 @@ function writeFontStream(svgPath, fontStream) {
   let unicodeName = fileNmae;
   if (unicodeName.endsWith('_')) {
     unicodeName = unicodeName.replace(/_$/g, '').normalize('NFC');
-  }
-  if (symbol[unicodeName]) {
+  } else if (symbol[unicodeName]) {
     unicodeName = symbol[unicodeName];
+  } else {
+    unicodeName = unicodeName.normalize('NFC');
   }
   const glyph = fs.createReadStream(svgPath);
   //console.log(`\n  ┌┈▶ ${fileNmae} ${unicode}`);
