@@ -29,29 +29,29 @@
 
 ### 23 个<ruby>声母<rt>shēng mǔ</rt></ruby>
 
-<ruby>`b`<rt>菠</rt></ruby>
+<ruby>`b`<rt>波</rt></ruby>
 <ruby>`p`<rt>泼</rt></ruby>
-<ruby>`m`<rt>摩</rt></ruby>
+<ruby>`m`<rt>么</rt></ruby>
 <ruby>`f`<rt>佛</rt></ruby>
 <ruby>`d`<rt>的</rt></ruby>
 <ruby>`t`<rt>特</rt></ruby>
 <ruby>`n`<rt>讷</rt></ruby>
 <ruby>`l`<rt>乐</rt></ruby>
 <ruby>`g`<rt>歌</rt></ruby>
-<ruby>`k`<rt>可</rt></ruby>
+<ruby>`k`<rt>科</rt></ruby>
 <ruby>`h`<rt>喝</rt></ruby>
 <ruby>`j`<rt>鸡</rt></ruby>
-<ruby>`q`<rt>气</rt></ruby>
+<ruby>`q`<rt>七</rt></ruby>
 <ruby>`x`<rt>西</rt></ruby>
 <ruby>`zh`<rt>知</rt></ruby>
 <ruby>`ch`<rt>吃</rt></ruby>
 <ruby>`sh`<rt>师</rt></ruby>
 <ruby>`r`<rt>日</rt></ruby>
-<ruby>`z`<rt>字</rt></ruby>
-<ruby>`c`<rt>磁</rt></ruby>
+<ruby>`z`<rt>姿</rt></ruby>
+<ruby>`c`<rt>次</rt></ruby>
 <ruby>`s`<rt>司</rt></ruby>
 <ruby>`y`<rt>医</rt></ruby>
-<ruby>`w`<rt>舞</rt></ruby>
+<ruby>`w`<rt>乌</rt></ruby>
 
 ### 6 个<ruby>单韵母<rt>dān yùn mǔ</rt></ruby>
 
@@ -60,17 +60,17 @@
 <ruby>`e`<rt>鹅</rt></ruby>
 <ruby>`i`<rt>医</rt></ruby>
 <ruby>`u`<rt>乌</rt></ruby>
-<ruby>`ü`<rt>鱼</rt></ruby>
+<ruby>`ü`<rt>淤</rt></ruby>
 
 ### 8 个<ruby>复韵母<rt>fù yùn mǔ</rt></ruby>
 
-<ruby>`ai`<rt>艾</rt></ruby>
+<ruby>`ai`<rt>埃</rt></ruby>
 <ruby>`ei`<rt>诶</rt></ruby>
-<ruby>`ui`<rt>水</rt></ruby>
-<ruby>`ao`<rt>袄</rt></ruby>
-<ruby>`ou`<rt>鸥</rt></ruby>
+<ruby>`ui`<rt>微</rt></ruby>
+<ruby>`ao`<rt>凹</rt></ruby>
+<ruby>`ou`<rt>欧</rt></ruby>
 <ruby>`iu`<rt>优</rt></ruby>
-<ruby>`ie`<rt>姐</rt></ruby>
+<ruby>`ie`<rt>耶</rt></ruby>
 <ruby>`üe`<rt>月</rt></ruby>
 
 ### 1 个<ruby>特殊韵母<rt>tè shū yùn mǔ</rt></ruby>
@@ -82,13 +82,13 @@
 <ruby>`an`<rt>安</rt></ruby>
 <ruby>`en`<rt>恩</rt></ruby>
 <ruby>`in`<rt>音</rt></ruby>
-<ruby>`un`<rt>春</rt></ruby>
+<ruby>`un`<rt>温</rt></ruby>
 <ruby>`ün`<rt>晕</rt></ruby>
 
 ### 4 个<ruby>后鼻音韵母<rt>hòu bí yīn yùn mǔ</rt></ruby>
 
 <ruby>`ang`<rt>昂</rt></ruby>
-<ruby>`eng`<rt>风</rt></ruby>
+<ruby>`eng`<rt>嗯</rt></ruby>
 <ruby>`ing`<rt>鹦</rt></ruby>
 <ruby>`ong`<rt>虫</rt></ruby>
 
