@@ -56,17 +56,17 @@
 ```css
 @font-face {
   font-family: 'pinyinstep';
-  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-step.ttf?v=1.10.1') format('truetype');
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-step.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'pinyin';
-  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-regular.ttf?v=1.10.1') format('truetype');
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'pinyin-wenkai-light';
-  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-wenkai-light.ttf?v=1.10.1') format('truetype');
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-wenkai-light.ttf') format('truetype');
 }
 
 body {
@@ -78,6 +78,8 @@ body {
 
 ```
 https://unpkg.com/pinyin-font/fonts/pinyin-step.ttf
+https://unpkg.com/pinyin-font/fonts/pinyin-regular.ttf
+https://unpkg.com/pinyin-font/fonts/pinyin-wenkai-light.ttf
 ```
 
 ## <ruby>拼音笔顺体<rt>Pīnyīn Step Font</rt></ruby>
