@@ -41,12 +41,44 @@
 
 [![Buy me a coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-ffdd00?logo=buy-me-a-coffee&logoColor=black)](https://jaywcjlove.github.io/#/sponsor)
 [![Follow On X](https://img.shields.io/badge/Follow%20on%20X-333333?logo=x&logoColor=white)](https://x.com/jaywcjlove)
+[![CI](https://github.com/jaywcjlove/pinyin-font/actions/workflows/ci.yml/badge.svg)](https://github.com/jaywcjlove/pinyin-font/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/pinyin-font.svg)](https://www.npmjs.com/package/pinyin-font)
+[![Open in unpkg](https://img.shields.io/badge/Open%20in-unpkg-blue)](https://uiwjs.github.io/npm-unpkg/#/pkg/pinyin-font/file/README.md)
 
 <img align="right" width="100" src="https://github.com/user-attachments/assets/dce7016f-4301-4972-8fa2-a9a4140dbbb8" />
 
 宝宝字帖拼音字体，提供拼音和拼音音标笔顺字体，专门为应用《[宝宝字帖](https://github.com/jaywcjlove/copybook-generator)》制作的拼音字体。在推友 [@Stanimal](https://x.com/N4tli30/status/1814174567524700551) 推荐[南翔棒棒体](https://www.zcool.com.cn/work/ZNDc1MDMzNDA=.html)时，发现该字体没有包含拼音音标字母（如：`ā` `á` `ǎ` `à`）。因此，宝宝字帖的拼音字体加入了这部分内容。
 
+## 使用示例
 
+先在 CSS 中引入对应字体，再把页面默认字体切换到 `pinyin`：
+
+```css
+@font-face {
+  font-family: 'pinyinstep';
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-step.ttf?v=1.10.1') format('truetype');
+}
+
+@font-face {
+  font-family: 'pinyin';
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-regular.ttf?v=1.10.1') format('truetype');
+}
+
+@font-face {
+  font-family: 'pinyin-wenkai-light';
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-wenkai-light.ttf?v=1.10.1') format('truetype');
+}
+
+body {
+  font-family: 'pinyin';
+}
+```
+
+其它 CDN 字体文件：
+
+```
+https://unpkg.com/pinyin-font/fonts/pinyin-step.ttf
+```
 
 ## <ruby>拼音笔顺体<rt>Pīnyīn Step Font</rt></ruby>
 
