@@ -49,39 +49,6 @@
 
 宝宝字帖拼音字体，提供拼音和拼音音标笔顺字体，专门为应用《[宝宝字帖](https://github.com/jaywcjlove/copybook-generator)》制作的拼音字体。在推友 [@Stanimal](https://x.com/N4tli30/status/1814174567524700551) 推荐[南翔棒棒体](https://www.zcool.com.cn/work/ZNDc1MDMzNDA=.html)时，发现该字体没有包含拼音音标字母（如：`ā` `á` `ǎ` `à`）。因此，宝宝字帖的拼音字体加入了这部分内容。
 
-## 使用示例
-
-先在 CSS 中引入对应字体，再把页面默认字体切换到 `pinyin`：
-
-```css
-@font-face {
-  font-family: 'pinyinstep';
-  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-step.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'pinyin';
-  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'pinyin-wenkai-light';
-  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-wenkai-light.ttf') format('truetype');
-}
-
-body {
-  font-family: 'pinyin';
-}
-```
-
-其它 CDN 字体文件：
-
-```
-https://unpkg.com/pinyin-font/fonts/pinyin-step.ttf
-https://unpkg.com/pinyin-font/fonts/pinyin-regular.ttf
-https://unpkg.com/pinyin-font/fonts/pinyin-wenkai-light.ttf
-```
-
 ## <ruby>拼音笔顺体<rt>Pīnyīn Step Font</rt></ruby>
 
 ![宝宝字帖拼音笔顺体](https://github.com/user-attachments/assets/71842a73-64a1-4b32-ba2f-466ddc06e699)
@@ -175,6 +142,41 @@ https://unpkg.com/pinyin-font/fonts/pinyin-wenkai-light.ttf
 `ī` `í` `ǐ` `ì`  
 `ū` `ú` `ǔ` `ù`  
 `ǖ` `ǘ` `ǚ` `ǜ` `ü`  
+
+## 使用示例
+
+先在 CSS 中引入对应字体，再把页面默认字体切换到 `pinyin`：
+
+```css
+@font-face {
+  font-family: 'pinyinstep';
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-step.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'pinyin';
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-regular.ttf')
+       format('truetype');
+}
+
+@font-face {
+  font-family: 'pinyin-wenkai-light';
+  src: url('https://jaywcjlove.github.io/pinyin-font/pinyin-wenkai-light.ttf')
+       format('truetype');
+}
+
+body {
+  font-family: 'pinyin';
+}
+```
+
+其它 CDN 字体文件：
+
+```
+https://unpkg.com/pinyin-font/fonts/pinyin-step.ttf
+https://unpkg.com/pinyin-font/fonts/pinyin-regular.ttf
+https://unpkg.com/pinyin-font/fonts/pinyin-wenkai-light.ttf
+```
 
 ## License
 
