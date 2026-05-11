@@ -1,17 +1,27 @@
 {
   "name": "pinyin-font",
   "version": "1.10.1",
-  "private": true,
   "description": "宝宝字帖拼音字体",
   "homepage": "https://jaywcjlove.github.io/pinyin-font/",
   "repository": {
     "type": "git",
     "url": "https://github.com/jaywcjlove/pinyin-font"
   },
+  "files": [
+    "fonts/pinyin-regular.svg",
+    "fonts/pinyin-regular.ttf",
+    "fonts/pinyin-regular.woff2",
+    "fonts/pinyin-step.svg",
+    "fonts/pinyin-step.ttf",
+    "fonts/pinyin-step.woff2",
+    "fonts/pinyin-wenkai-light.svg",
+    "fonts/pinyin-wenkai-light.ttf",
+    "fonts/pinyin-wenkai-light.woff2"
+  ],
   "scripts": {
     "start": "node scripts/main.mjs"
   },
-  "keywords": [],
+  "keywords": ["pinyin", "font", "字体", "拼音"],
   "author": "jaywcjlove",
   "license": "MIT",
   "devDependencies": {

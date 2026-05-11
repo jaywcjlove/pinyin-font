@@ -33,7 +33,6 @@ jobs:
           head-ref: ${{steps.create_tag.outputs.version}}
           filter: '[R|r]elease[d]\s+[v|V]\d(\.\d+){0,2}'
 
-
       - name: Create Release
         uses: ncipollo/release-action@v1
         if: steps.create_tag.outputs.successful == 'true'
@@ -50,3 +49,8 @@ jobs:
             Comparing Changes: ${{ steps.changelog.outputs.compareurl }} 
 
             ${{ steps.changelog.outputs.changelog }}
+
+      - run: mv docs fonts
+      - run: NODE_AUTH_TOKEN="" npm publish --access public --provenance
+        name: 📦 pinyin-font publish to NPM
+        continue-on-error: true
